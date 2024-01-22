@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<jetscape>
+  
+  <nEvents> 2 </nEvents>
+  
+  <JetScapeWriterAscii> on </JetScapeWriterAscii>
+  <!--outputFilename>pgun_matter_jet_survey</outputFilename-->
+  <!--JetScapeWriterFinalStatePartonsAscii> on </JetScapeWriterFinalStatePartonsAscii-->
+  <!--JetScapeWriterFinalStateHadronsAscii> on </JetScapeWriterFinalStateHadronsAscii-->
+
+  <!-- Inital State Module  -->
+  <!--IS>
+    <Trento> </Trento>
+  </IS-->
+  
+  
+  <PGun>
+      <name>PGun</name>
+      <pT>100</pT>
+      <parID>21</parID>
+      <useHybridHad>0</useHybridHad>
+   </PGun>
+ 
+  
+  <!-- Hydro  Module  -->
+  <!--Hydro>
+    <Brick bjorken_expansion_on="false" start_time="0.6"> </Brick>
+  </Hydro-->
+  
+  <!--Eloss Modules -->
+  <Eloss>
+    <Matter>
+      <in_vac> 1 </in_vac>
+    </Matter>
+  </Eloss>
+  
+  <!--PartonPrinter>
+      <FileName>./FinalPartonsInfo.dat</FileName>
+  </PartonPrinter-->
+  
+  <!-- Jet Hadronization Module -->
+  <JetHadronization>
+    <name>colorless</name>
+  </JetHadronization>
+  
+</jetscape>
