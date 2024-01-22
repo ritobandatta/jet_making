@@ -1,0 +1,25 @@
+Conditions:
+R=0.2
+algo=anti-kT
+rapidity cut = 0.7
+No  need to have pT cut for particle
+The largest pT charged particle in a jet must have pT  greater than 5 GeV.
+
+In order to run JET_READER.cc
+Do this command 
+"g++ -std=c++11 JET_READER.cc -o JET_READER \
+    $(/Users/ritobandatta/fastjet-install/bin/fastjet-config --cxxflags --libs --plugins)
+
+./JET_READER
+"
+Assuming fastjet-install/bin folder is located at /Users/ritobandatta/fastjet-install/
+
+In WSU grid, first we need to load the module by "module load fastjet/3.4.0"
+Once loaded the trick to run would be
+ "
+g++ -std=c++11 jet_maker.cc -o jet_maker\ $(/wsu/el7/gnu7/fastjet/3.4.0/bin/fastjet-config --cxxflags --libs --plugins)$
+"
+"jet_maker.cc" is especially made for running and making jets in wsu grid, though the command doesn't yet make use of job submission. This would surely be a thing to be done in future.
+
+To download the test file wget this link "https://waynestateprod-my.sharepoint.com/:u:/g/personal/hl9735_wayne_edu/EerEQXNAziFAolmr5tly6rwBC6cFhqJs2yrXC3HzQNQCiQ?e=Tt2vLY"
+JetscapeHadronListBin100_110_Run0.out  
